@@ -1,15 +1,10 @@
-function Wall(point, size, horizontal){
-    this.position = point;
-    this.size = size;
-    this.generateCollisionPoints();
-    
-}
 
-Wall.prototype.generateCollisionPoints = function(){
-    this.xTop = this.position.x-this.size/2;
-    this.yTop = this.position.y-this.size/2;
-    this.width = this.size;
-    this.height = this.size;    
+function Wall(point, width, height){
+    this.position = point;
+    this.width = width;
+    this.height = height;
+    this.xTop = this.position.x - this.width/2;
+    this.yTop = this.position.y - this.height/2;
 }
 
 Wall.prototype.isColliding = function(particle){

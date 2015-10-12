@@ -40,6 +40,7 @@ Particle.prototype.isColliding = function(objects){
         colliding = (Math.abs(object.position.x - this.position.x) <= object.width/2 && Math.abs(object.position.y - this.position.y) <=  object.height/2);
         if(colliding){
             object.particlesCollided++;
+            return colliding;
         }
     }
     return colliding;
